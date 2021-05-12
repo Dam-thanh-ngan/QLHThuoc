@@ -1,0 +1,89 @@
+﻿@model IEnumerable<QLHieuThuoc.Models.Thuoc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNhom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CongDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThanhPhan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonViTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.XuatXu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNCC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaThuoc)
+        </td> 
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNhom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenThuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CongDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThanhPhan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonViTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XuatXu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNCC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaThuoc }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaThuoc }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaThuoc })
+        </td>
+    </tr>
+}
+
+</table>
